@@ -69,11 +69,32 @@ Basic Concepts:
 1. Value Set  
     - four values
     - eight strengths
-    > Value Level       Condition in Hardware Circuits  
-    > 0                 Logic zero,false condition  
-    > 1                 Logic one,true condition  
-    > x                 Unknown value  
-    > z                 High impedance,floating state
+    - Value Level Condition in Hardware Circuits  
+        - 0                 Logic zero,false condition  
+        - 1                 Logic one,true condition  
+        - x                 Unknown value  
+        - z                 High impedance,floating state  
+    - Strength Level Type Degree
+        - supply Driving (strongest)
+        - strong Driving 
+        - pull   Driving 
+        - large  Storage  
+        - weak   Driving  
+        - medium Storage  
+        - small  Storage  
+        - highz  High Impedance (weakest)
+    > If two signals of unequal strengths are driven on a wire,the stronger signal prevails.For example,if two signals of strength **strong1** and **weak0** contend,the result is resolved as a **strong1**.  
+    > If two signals of strength **strong1** and **strong0** conflict,the result is unknown(**x**).
+2. Nets  
+    Nets represent connections between hardware elements.
+    > wire a; // Declare net a for the above circuit
+    > wire b,c; // Declare two wires b,c for the above circuit
+    > wire d = 1'b0; // Net **d** is fixed to logic value 0 at declaration.   
+    
+    Note that net is not a keyword but represents a class of data types such as **wire**,**wand**,**wor**,**tri**,**triand**,**trior**,**trireg**,etc.The **wire** declaration is used most frequently.
+3. Registers  
+    _Registers_ represent data storage elements.Registers retain value until another value is placed onto them. Do not confuse the term _registers_ in Verilog with hardware registers built from edge-triggered flip-flops in real circuits.
+    - Register data types are commonly declared by the keyword **reg**
 
 
 

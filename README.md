@@ -14,32 +14,55 @@ Basic Concepts:
 - IEEE 1364
 
 ### Lexical Conventions:
-- Whitespace
+1. Whitespace
     - blank spaces(\b)
     - tabs(\t)
     - newlines(\n)
-- Comments
+2. Comments
     - one-line comment starts with "//",skips from that point to the end of line
     - a multiple-line comment starts with "/*" and ends with "*/"
-- Operators
+3. Operators
     - unary
     - binary
     - ternary
-- Number Specification:<size>'<base_format><number>
-    - Sized numbers:
+4. Number Specification:      
+    - Sized numbers(\<size\>\'\<base format\>\<number\>):      
         - decimal('d or 'D)
         - hexadecimal('h or 'H)
         - binary('b or 'B)
         - octal('o or 'O)
+        > 4'b1111 // This is a 4-bit  binary number  
+        > 12'habc // This is a 12-bit hexadecimal   number   
+        > 16'd255 // This is a 16-bit decimal number.  
+    - Unsigned numbers
+        - without a \<_base format_\>,default decimal
+        - without a \<_size_\>,default must be at least 32
+    - **X** or **Z** values
+        - **X** : unknown
+        - **Z** : high impedance values
+    - Negative numbers
+        > -6'd3 // 8-bit negative number stored as 2's complement of 3  
+        > 4'd-2 // Illegal specification
+    - Underscore characters and question marks
+        - improve readability of numbers and are ignored by Verilog  
+        - A question mark "**?**" is the Verilog HDL alternative for **z** in the context of numbers.
+        > 12'b1111_0000_1010 // Use of underline characters for readability  
+        > 4'b10?? //Equivalent of a 4'b10zz
+5. Strings  
+    A string is a sequence of characters that are enclosed by double quotes.
+    > "Hello Verilog World" // is a string  
+    > "a / b" // is a string
 
-- Key word
-- +/-<size>'<base_format><number>:
-    
-    - 8'b1000_1101
-    - 8'ha6
-    - 5'o35
-    - 4'd6
-    - 4'b1x_01
+6. Identifiers and Keywords  
+    - Keywords are special identifiers reserved to define the language constructs.  
+    - Keywords are in lowercase.
+    - Identifiers are names given to objects so that they can be referenced in the design.
+    - Identifiers are made up of alphanumeric characters,the underscore(_) and the dollar sign($) and are case sensitive.
+    - Identifiers start with an alphabetic character or an underscore.
+    - They cannot start with a number or a $ sign.
+    > reg value; // reg is a keyword; value is an identifier  
+    > input clk; // input is a keyword;clk is an identifier
+
 
 
 

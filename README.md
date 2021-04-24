@@ -62,6 +62,18 @@ Basic Concepts:
     - They cannot start with a number or a $ sign.
     > reg value; // reg is a keyword; value is an identifier  
     > input clk; // input is a keyword;clk is an identifier
+7. Escaped Identifiers  
+    _Escaped Identifiers_ begin with the backslash(\) charater and end with whitespace(space,tab,or newline).
+
+### Data Types:
+1. Value Set  
+    - four values
+    - eight strengths
+    > Value Level       Condition in Hardware Circuits  
+    > 0                 Logic zero,false condition  
+    > 1                 Logic one,true condition  
+    > x                 Unknown value  
+    > z                 High impedance,floating state
 
 
 

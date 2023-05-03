@@ -4,6 +4,6 @@ module top_module (
     output out
 );
 
-    assign out = a&b;
+    assign out = ~(a^b);
 
 endmodule

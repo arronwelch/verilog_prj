@@ -1,3 +1,9 @@
+/* 19_vector5.v
+ * aaaaa_bbbbb_ccccc_ddddd_eeeee
+ * abcde_abcde_abcde_abcde_abcde
+ * bit24 --> bit0
+ */
+
 module top_module (
     input a, b, c, d, e,
     output [24:0] out );//

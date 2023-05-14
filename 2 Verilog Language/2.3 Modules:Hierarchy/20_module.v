@@ -1,3 +1,5 @@
+/* 20_module.v
+ */
 
 module mod_a ( input in1, input in2, output out );
     // Module body
@@ -20,9 +22,7 @@ module top_module (
 				// It is simply coincidence that they have the same name)
 	);
 
-/*
 	// Create an instance of "mod_a" named "inst2", and connect ports by position:
 	mod_a inst2 ( a, b, out );	// The three wires are connected to ports in1, in2, and out, respectively.
-*/
 	
 endmodule

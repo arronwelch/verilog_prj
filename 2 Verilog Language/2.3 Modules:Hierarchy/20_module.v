@@ -1,10 +1,8 @@
-/* 20_module.v
- */
+// 20_module.v
 
 module mod_a ( input in1, input in2, output out );
     // Module body
     assign out = ~(in1^in2);
-
 endmodule
 
 module top_module (
@@ -12,7 +10,6 @@ module top_module (
 	input b,
 	output out
 );
-
 	// Create an instance of "mod_a" named "inst1", and connect ports by name:
 	mod_a inst1 ( 
 		.in1(a), 	// Port"in1"connects to wire "a"
@@ -24,5 +21,4 @@ module top_module (
 
 	// Create an instance of "mod_a" named "inst2", and connect ports by position:
 	mod_a inst2 ( a, b, out );	// The three wires are connected to ports in1, in2, and out, respectively.
-	
 endmodule

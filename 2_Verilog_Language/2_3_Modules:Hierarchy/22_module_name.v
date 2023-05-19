@@ -1,4 +1,5 @@
 // 2 Verilog Language/2.3 Modules:Hierarchy/22_module_name.v 
+// connect the 6 ports by name to your top-level module's ports
 
 module mod_a (
     output out1,

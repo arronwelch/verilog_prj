@@ -1,4 +1,5 @@
-//ripple carry adder
+// 2_Verilog_Language/2_3_Modules_Hierarchy/26_module_fadd.v
+// ripple carry adder
 
 module top_module (
     input [31:0] a,

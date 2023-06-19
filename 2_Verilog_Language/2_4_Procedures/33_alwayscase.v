@@ -13,27 +13,28 @@ module top_module (
 );
     always @(*) begin // This is a combinational circuit
         case (sel)
-            3'b0 : begin
+            3'd0 : begin
                 out = data0;
             end
-            3'b1 : begin
+            3'd1 : begin
                 out = data1;
             end
-            3'b2 : begin
+            3'd2 : begin
                 out = data2;
             end
-            3'b3 : begin
+            3'd3 : begin
                 out = data3;
             end
-            3'b4 : begin
+            3'd4 : begin
                 out = data4;
             end
-            3'b5 : begin
+            3'd5 : begin
                 out = data5;
             end
             default : begin
-                out = data4;
+                out = 3'b0;
             end
         endcase
     end
+
 endmodule
